@@ -1,8 +1,16 @@
 import time
- 
+import os
+
+
 class LCG_Class:
   def __init__(self):
-    self.s = time.time()
+    custom_seed = os.name+os.getcwd()+str(time.time())+os.path.join(os.path.dirname(__file__), "..")+os.path.dirname(__file__)
+    self.s = 1
+    for i in range(len(custom_seed)):
+        ch = custom_seed[i]
+        in1 = ord(ch) 
+        self.s = self.s * in1
+    self.s = int(str(self.s)[:10]) + time.time()
     self.a = 1664525
     self.c = 1013904223
     self.m = 2**32
@@ -10,7 +18,6 @@ class LCG_Class:
   def seed(self,seed):
     self.s = seed
 
-    
   def randnumbers(self,n):
     numbers = []
     for i in range(n):
@@ -18,8 +25,7 @@ class LCG_Class:
       numbers.append(int(self.s))
       
     return numbers
- 
- 
+
   def randnumber(self):
     self.s = (self.a * self.s + self.c) % self.m
       
@@ -30,8 +36,7 @@ class LCG_Class:
 
   def randint(self,start, end):
     return self.choice(range(start,(end+1)))
- 
- 
+
   def choice(self, the_list):
     count = 0
     number = len(the_list)
@@ -43,7 +48,6 @@ class LCG_Class:
      sequance = int(str(self.randnumber())[-count:])
      if not (len(the_list)-1) < sequance:
        return the_list[sequance]
-
 
   def shuffle(self,the_list):
     copy_of_list = the_list.copy()
@@ -63,4 +67,6 @@ class LCG_Class:
   def uniform(self,start,end):
     return self.randint(start, end) + self.random()
 
+
 lcg = LCG_Class()
+print(lcg.s)
