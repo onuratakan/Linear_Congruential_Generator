@@ -69,4 +69,3 @@ class LCG_Class:
 
 
 lcg = LCG_Class()
-print(lcg.s)
