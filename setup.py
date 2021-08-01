@@ -1,7 +1,7 @@
 from setuptools import setup
 
-setup(name='Linear Congruential Generator',
-version='0.1.0',
+setup(name='LCG',
+version='0.1.1',
 description="""The random number generator.
 """,
 long_description="""
@@ -18,7 +18,7 @@ from lcg import LCG
 ```
 """,
 long_description_content_type='text/markdown',
-url='https://github.com/onuratakan/Linear_Congruential_Generator',
+url='https://github.com/onuratakan/LCG',
 author='Onur Atakan ULUSOY',
 author_email='atadogan06@gmail.com',
 license='MIT',
