@@ -68,4 +68,4 @@ class LCG_Class:
     return self.randint(start, end) + self.random()
 
 
-lcg = LCG_Class()
+LCG = LCG_Class()
