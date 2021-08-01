@@ -2,7 +2,7 @@
 
 # Installing
 ```console
-pip install lcg
+pip install Linear-Congruential-Generator
 ```
 
 # Import

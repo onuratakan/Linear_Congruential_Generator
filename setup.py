@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='LCG',
+setup(name='Linear Congruential Generator',
 version='0.1.1',
 description="""The random number generator.
 """,
@@ -9,7 +9,7 @@ long_description="""
 
 # Installing
 ```console
-pip install lcg
+pip install Linear-Congruential-Generator
 ```
 
 # Import
