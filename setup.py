@@ -1,7 +1,7 @@
 from setuptools import setup
 
-setup(name='Linear Congruential Generator',
-version='0.1.2',
+setup(name='Linear_Congruential_Generator',
+version='0.1.4',
 description="""The random number generator.
 """,
 long_description="""
@@ -24,5 +24,5 @@ author_email='atadogan06@gmail.com',
 license='MIT',
 packages=["lcg"],
 package_dir={'':'src'},
-python_requires='>=3.0',
+python_requires='>=3',
 zip_safe=False)
